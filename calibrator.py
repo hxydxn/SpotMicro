@@ -22,7 +22,7 @@ board = False
 while True:
     cin = input("Enter int to change angle, c to change port, d to change power, s to stop: ")
     if (cin == "c"):
-        port = int(cin)
+        port = int(input("Input port number: "))
         print(f"Port is now {port}")
     elif (cin == "d"):
         power = float(input(f"Enter power given to servo at port {port} [-1.0,1.0]: "))    
