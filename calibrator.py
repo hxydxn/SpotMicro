@@ -26,7 +26,7 @@ while True:
         port = int(input("Input port number: "))
         print(f"Port is now {port}")
     elif (cin == "b"):
-        board != board
+        board = not board
         print("Board changed")
     elif (cin == "d"):
         power = float(input(f"Enter power given to servo at port {port} [-1.0,1.0]: "))  
