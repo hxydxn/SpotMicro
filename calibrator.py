@@ -20,7 +20,7 @@ port = 0
 board = True
 
 while True:
-    print("Board one" if True else "Board two")
+    print("Board one" if board else "Board two")
     cin = input("Enter int to change angle, c to change port, d to change power, s to stop: ")
     if (cin == "c"):
         port = int(input("Input port number: "))
