@@ -18,4 +18,4 @@ with open('calibration.json') as infile:
                 if (int(board) == 0):
                     kit.servo[int(pair[0])].angle = int(pair[1])
                 else:
-                    kit.servo[int(pair[0])].angle = int(pair[1])
+                    kit2.servo[int(pair[0])].angle = int(pair[1])
