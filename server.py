@@ -39,10 +39,12 @@ async def set_configuration(request):
 async def set_profile(request):
     servos = request.json["servos"]
     for servo in servos:
+        print(servo)
         angle = servo["rest_angle"]
         board_id = servo["board"]
         port = servo["channel"]
         driver.set_servo_angle(board_id, port, angle)
+    return json({}, status=200)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
