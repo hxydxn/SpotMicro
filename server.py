@@ -38,7 +38,7 @@ async def set_configuration(request):
         driver.set_servo_angle(servo["board"], servo["port"], servo["angle"])
     return json({}, status=200)
 
-@app.route("/profile", methods=["POST", OPTIONS])
+@app.route("/profile", methods=["POST", "OPTIONS"])
 async def set_profile(request):
     servos = request.json["servos"]
     for servo in servos:
