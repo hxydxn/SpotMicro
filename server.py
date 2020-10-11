@@ -24,9 +24,6 @@ async def test_power(request):
     driver.set_servo_angle(board, channel, angle)
     return json({"angle": angle, "board": board, "channel": channel})
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000)
-
 @app.route("/rest", methods=["POST", "OPTIONS"])
 async def set_configuration(request):
     servos_1 = request.json["PCA9865_1"]
@@ -46,3 +43,8 @@ async def set_profile(request):
         board_id = servo["board"]
         port = servo["channel"]
         driver.set_servo_angle(board_id, port, angle)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
+
+
